@@ -1,7 +1,7 @@
 @BoardPositive
 Feature: User can use board properly
 
-  @Positive01
+  @BoardPositive01
   Scenario: User create new board list
     Given User click nova team
     When User click board box menu
@@ -10,7 +10,7 @@ Feature: User can use board properly
     And User click create button
     Then User can see the result of create new board
 
-  @Positive02
+  @BoardPositive02
   Scenario: User create new card
     Given User click nova team
     When User click board box menu

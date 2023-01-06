@@ -522,4 +522,105 @@ public class BoardPages extends Bypass {
         Assert.assertTrue(verifyCheerscommentinboard.isDisplayed());
     }
 
+    ////////////////////////////////////////////////////////////NEGATIVE////////////////////////////////////////////////////////////
+
+    //CREATE NEW BOARDLIST WITHOUT WORDS
+    By typewihoutwordslistcoloumn = By.cssSelector("[class=\"form-control\"]");
+    By verifycantcreatenewboard = By.xpath("//*[contains(text(),'List name cannot be empty')]");
+
+    public void Typewihoutwordslistcoloumn() {
+        driver.findElement(typewihoutwordslistcoloumn).sendKeys("");
+    }
+    public void Verifycantcreatenewboardwithoutword() {
+        WebElement verifyCantcreatenewboard = driver.findElement(verifycantcreatenewboard);
+        Assert.assertTrue(verifyCantcreatenewboard.isDisplayed());
+    }
+
+    //CREATE NEW BOARDLIST WITH ONLY SPACE
+    By typewithonlyspacelistcoloumn = By.cssSelector("[class=\"form-control\"]");
+    By verifycantcreatenewboardwithonlyspace = By.xpath("//*[contains(text(),'List name cannot be empty')]");
+
+    public void Typewithonlyspacelistcoloumn() {
+        driver.findElement(typewithonlyspacelistcoloumn).sendKeys(" ");
+    }
+    public void Verifycantcreatenewboardwithonlyspace() {
+        WebElement verifyCantcreatenewboardwithonlyspace = driver.findElement(verifycantcreatenewboardwithonlyspace);
+        Assert.assertTrue(verifyCantcreatenewboardwithonlyspace.isDisplayed());
+    }
+
+    //CREATE NEW CARD WITHOUT WORDS
+    By typewihoutwordscardname = By.xpath("//input[@placeholder='Card name']");
+    By verifycantcreatenewcardwihoutwords = By.xpath("//*[contains(text(),'Card name cannot be empty')]");
+
+    public void Typewihoutwordscardname() {
+        driver.findElement(typewihoutwordscardname).sendKeys("");
+    }
+    public void Verifycantcreatenewcardwihoutwords() {
+        WebElement verifyCantcreatenewcardwihoutwords = driver.findElement(verifycantcreatenewcardwihoutwords);
+        Assert.assertTrue(verifyCantcreatenewcardwihoutwords.isDisplayed());
+    }
+
+    //CREATE NEW CARD WITH ONLY SPACE
+    By typewithonlyspacecardname = By.xpath("//input[@placeholder='Card name']");
+    By verifycantcreatenewcardwithonlyspace = By.xpath("//*[contains(text(),'Card name cannot be empty')]");
+
+    public void Typewithonlyspacescardname() {
+        driver.findElement(typewithonlyspacecardname).sendKeys(" ");
+    }
+    public void Verifycantcreatenewcardwithonlyspace() {
+        WebElement verifyCantcreatenewcardwithonlyspace = driver.findElement(verifycantcreatenewcardwithonlyspace);
+        Assert.assertTrue(verifyCantcreatenewcardwithonlyspace.isDisplayed());
+    }
+
+    //ADD COMMENT WITHOUT WORDS
+    By typewihoutwordscommentinboard = By.xpath("//*[@class=\"fr-element fr-view\"]");
+    By verifyaddcommentinboardwihoutwords = By.cssSelector("[placeholder=\"Add new comment...\"]");
+    By clickcommentcoloumninblash2 = By.xpath("//*[@class=\"Main_input__qq9k9 Main_secondary__2bXP3\"]");
+
+    public void Typewihoutwordscommentinboard() {
+        driver.findElement(clickcommentcoloumninblash2).click();
+        driver.findElement(typewihoutwordscommentinboard).sendKeys("");
+    }
+    public void Verifyaddcommentinboardwihoutwords() {
+        WebElement verifyCantaddcommentinboardwihoutwords = driver.findElement(verifyaddcommentinboardwihoutwords);
+        Assert.assertTrue(verifyCantaddcommentinboardwihoutwords.isDisplayed());
+    }
+
+    //ADD COMMENT WITH ONLY SPACE
+    By typewithonlyspacecommentinblash = By.xpath("//*[@class=\"fr-element fr-view\"]");
+    By verifyaddcommentinboardwithonlyspace = By.xpath("//*[contains(text(),'Comment cannot be empty')]");
+    By clickcommentcoloumninblash3 = By.xpath("//*[@class=\"Main_input__qq9k9 Main_secondary__2bXP3\"]");
+
+    public void Typecommentinboardwithonlyspace() {
+        driver.findElement(clickcommentcoloumninblash3).click();
+        driver.findElement(typewithonlyspacecommentinblash).sendKeys(" ");
+    }
+    public void Verifycantaddcommentinboardwithonlyspace() {
+        WebElement verifyCantaddcommentinboardwithonlyspace = driver.findElement(verifyaddcommentinboardwithonlyspace);
+        Assert.assertTrue(verifyCantaddcommentinboardwithonlyspace.isDisplayed());
+    }
+
+    //CREATE LABEL WITHOUT WORDS
+    By typewihoutwordsnamelabelcoloumn = By.cssSelector("[class=\"form-control\"]");
+    By verifycantcreatelabelwihoutwords = By.xpath("//*[contains(text(),'Label name cannot be empty!')]");
+
+    public void Typewihoutwordsnamelabelcoloumn() {
+        driver.findElement(typewihoutwordsnamelabelcoloumn).sendKeys("");
+    }
+    public void Verifycantcreatelabelwihoutwords() {
+        WebElement verifyCantcreatelabelwihoutwords = driver.findElement(verifycantcreatelabelwihoutwords);
+        Assert.assertTrue(verifyCantcreatelabelwihoutwords.isDisplayed());
+    }
+
+    //CREATE LABEL ONLY WITH SPACE
+    By typewithonlyspacenamelabelcoloumn = By.cssSelector("[class=\"form-control\"]");
+    By verifycantcreatelabelwithonlyspace = By.xpath("//*[contains(text(),'Label name cannot be empty!')]");
+
+    public void Typewithonlyspacenamelabelcoloumn() {
+        driver.findElement(typewithonlyspacenamelabelcoloumn).sendKeys(" ");
+    }
+    public void Verifycantcreatelabelwithonlyspace() {
+        WebElement verifyCantcreatelabelwithonlyspace = driver.findElement(verifycantcreatelabelwithonlyspace);
+        Assert.assertTrue(verifyCantcreatelabelwithonlyspace.isDisplayed());
+    }
 }

@@ -519,4 +519,109 @@ public class BoardTest {
         Thread.sleep(2000);
         BoardPage.Verifycheerscommentinboard();
     }
+
+    //CREATE NEW BOARDLIST WITHOUT WORDS
+    @And("User type without words list Coloumn")
+    public void userTypeWithoutWordsListColoumn() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Typewihoutwordslistcoloumn();
+    }
+
+    @Then("User cant see the result of create new board without words")
+    public void userCantSeeTheResultOfCreateNewBoardWithoutWords() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Verifycantcreatenewboardwithoutword();
+    }
+    ////////////////////////////////////////////////////////////NEGATIVE////////////////////////////////////////////////////////////
+
+    //CREATE NEW BOARDLIST WITH ONLY SPACE
+    @And("User type only with space list Coloumn")
+    public void userTypeOnlyWithSpaceListColoumn() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Typewithonlyspacelistcoloumn();
+    }
+
+    @Then("User cant see the result of create new board only with space")
+    public void userCantSeeTheResultOfCreateNewBoardOnlyWithSpace() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Verifycantcreatenewboardwithonlyspace();
+    }
+
+    //CREATE NEW CARD WITHOUT WORDS
+    @And("User type without words card name")
+    public void userTypeWithoutWordsCardName() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Typewihoutwordscardname();
+    }
+
+    @Then("User cant see the result of create new card without words")
+    public void userCantSeeTheResultOfCreateNewCardWithoutWords() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Verifycantcreatenewcardwihoutwords();
+    }
+
+    //CREATE NEW CARD WITH ONLY SPACE
+    @And("User type only with space card name")
+    public void userTypeOnlyWithSpaceCardName() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Typewithonlyspacescardname();
+    }
+
+    @Then("User cant see the result of create new card only with space")
+    public void userCantSeeTheResultOfCreateNewCardOnlyWithSpace() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Verifycantcreatenewcardwithonlyspace();
+    }
+
+    //ADD COMMENT WITHOUT WORDS
+    @And("User type without words comment")
+    public void userTypeWithoutWordsComment() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Typewihoutwordscommentinboard();
+    }
+
+    @Then("User unsuccessfully add comment in board without words")
+    public void userUnsuccessfullyAddCommentInBoardWithoutWords() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Verifyaddcommentinboardwihoutwords();
+    }
+
+    //ADD COMMENT WITH ONLY SPACE
+    @And("User type only with space comment")
+    public void userTypeOnlyWithSpaceComment() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Typecommentinboardwithonlyspace();
+    }
+
+    @Then("User unsuccessfully add comment in board only with space")
+    public void userUnsuccessfullyAddCommentInBoardOnlyWithSpace() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Verifycantaddcommentinboardwithonlyspace();
+    }
+
+    //CREATE LABEL WITHOUT WORDS
+    @And("User type without words name label coloumn")
+    public void userTypeWithoutWordsNameLabelColoumn() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Typewihoutwordsnamelabelcoloumn();
+    }
+
+    @Then("User cant add label in board without words")
+    public void userCantAddLabelInBoardWithoutWords() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Verifycantcreatelabelwihoutwords();
+    }
+
+    //CREATE LABEL ONLY WITH SPACE
+    @And("User type only with space name label coloumn")
+    public void userTypeOnlyWithSpaceNameLabelColoumn() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Typewithonlyspacenamelabelcoloumn();
+    }
+
+    @Then("User cant add label in board only with space")
+    public void userCantAddLabelInBoardOnlyWithSpace() throws InterruptedException {
+        Thread.sleep(2000);
+        BoardPage.Verifycantcreatelabelwithonlyspace();
+    }
 }
